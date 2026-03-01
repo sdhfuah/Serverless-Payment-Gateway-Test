@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>Search</h2>
+  <input id="searchBox">
+  <button id="searchBtn">Search</button>
+  <div id="product-item" style="display:none">Switch 2</div>
+  <script>
+    document.getElementById('searchBtn').onclick = function () {
+      setTimeout(() => document.getElementById('product-item').style.display = 'block', 1000);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>Checkout</h2>
+  <input id="amount">
+  <button id="payBtn">Pay</button>
+  <div id="confirmation" style="display:none">Success</div>
+  <script>
+    document.getElementById('payBtn').onclick = function () {
+      setTimeout(() => document.getElementById('confirmation').style.display = 'block', 1000);
+    }
+  </script>
+</body>
+
+</html>
