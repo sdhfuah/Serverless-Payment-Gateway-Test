@@ -1,0 +1,26 @@
+amount,expectedStatus,description
+0.001,ACCEPTED,minimum valid boundary
+0.0005,REJECTED,below minimum boundary
+0.00049,REJECTED,well below minimum
+0.0015,ACCEPTED,valid micro-payment
+0.01,ACCEPTED,one cent
+0.099,ACCEPTED,sub-dime valid
+1.00,ACCEPTED,one dollar
+9.999,ACCEPTED,valid below ten
+10.00,ACCEPTED,ten dollars even
+49.995,ACCEPTED,mid-range micro-rounding
+50.001,ACCEPTED,just over fifty
+99.999,ACCEPTED,just under maximum
+100.00,ACCEPTED,maximum valid boundary
+100.001,REJECTED,above maximum boundary
+100.01,REJECTED,above maximum
+150.00,REJECTED,well above maximum
+999.99,REJECTED,far above maximum
+0.00,REJECTED,zero amount
+-1.00,REJECTED,negative amount
+-0.001,REJECTED,negative minimum
+abc,REJECTED,non-numeric string
+,REJECTED,empty/null amount
+ ,REJECTED,whitespace only
+1e2,ACCEPTED,scientific notation 100.0
+1.999999999,ACCEPTED,high precision truncation to 2dp
